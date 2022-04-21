@@ -1,0 +1,171 @@
+.square {
+  width: 50px;
+  height: 40px;
+  background-color: red;
+}
+
+.square:hover {
+  transform: scale(5.3);
+  transition: 2s ease;
+  background-color: yellow;
+}
+
+.car img {
+  width: 200px;
+}
+
+@keyframes moving {
+  0% {
+    left: -80em;
+    animation-timing-function: ease-out;
+  }
+  35% {
+    left: 0;
+  }
+  36%,
+  56% {
+    left: 0;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    left: 120%;
+  }
+}
+.car {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  animation: moving 10s linear -2s infinite;
+}
+
+.plane img {
+  width: 70px;
+  animation: shrink 1.5s;
+}
+
+.plane {
+  margin-top: 100px;
+  margin-left: 60px;
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(5.3);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+.plane img:hover {
+  transform: scale(5.3);
+  animation: grow 1.5s;
+  transition-duration: 2.5s;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  background-color: yellow;
+  margin-top: 100px;
+  margin-left: 50px;
+}
+
+button:hover {
+  background-color: red;
+  transition: 2s ease;
+
+}
+
+.rectangular {
+  width: 30%;
+  margin-top: 70px;
+}
+
+.box {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(71, 67, 67);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-25rem);
+}
+.box span {
+  color: white;
+}
+
+.box:hover {
+  transition: 3s ease;
+  align-items: center;
+  transform: translateX(30%);
+}
+
+
+.form-row{
+  position:relative;
+  margin-top: 3rem;
+}
+
+
+/* input notification */
+
+input{
+
+  width: 20%;
+}
+
+label, input{
+
+  padding: 5px;
+  border-radius:3px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+}
+
+.label-helper{
+  display:block;
+  width: 20%;
+  height: 50px;
+  background-color:rgb(106, 207, 136);
+  color: white;
+  position:absolute;
+  bottom:0;
+  opacity: 0;
+  z-index:1;
+  transition: all .5s ease;
+}
+
+input:focus + .label-helper{
+ bottom: -80%; 
+ opacity:1;
+}
+
+
+
+
+/* movable box */
+
+
+.movable-box{
+
+  width: 120px;
+  height: 120px;
+  background-color: red;
+  position: relative;
+  animation: mymove 5s infinite;
+
+}
+
+
+@keyframes mymove {
+  0%   {top: 0px; left: 0px; background: red;}
+  25%  {top: 0px; left: 180px; background: rgb(9, 44, 202);}
+  50%  {top: 100px; left: 180px; background: rgb(116, 197, 235);}
+  75%  {top: 100px; left: 0px; background: rgb(226, 215, 52);}
+  100% {top: 0px; left: 0px; background: red;}
+}
